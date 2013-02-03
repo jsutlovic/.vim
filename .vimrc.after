@@ -1,0 +1,5 @@
+
+colorscheme blackboardish
+let g:NERDTreeWinPos = "right"
+set scrolloff=5 " Start scrolling the buffer 3 lines before cursor hits bottom
+
