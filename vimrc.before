@@ -1,1 +1,5 @@
 let mapleader=","
+
+"Tab navigation:
+nnoremap <S-h> gT
+nnoremap <S-l> gt
