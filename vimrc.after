@@ -13,6 +13,12 @@ set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ column=%c%V\ \ total=%L%)\ \ \%h%m%
 set bs=eol,start,indent " Backspace config
 set ruler " Show current position
 
+" bells are annoying
+set noerrorbells visualbell t_vb=
+
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
+
+" vim Gist stuff
+let g:gist_detect_filetype = 1
 
