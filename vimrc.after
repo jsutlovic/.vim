@@ -16,4 +16,3 @@ set ruler " Show current position
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
 
-
