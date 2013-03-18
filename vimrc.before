@@ -1,5 +1,11 @@
 let mapleader=","
 
 "Tab navigation:
-nnoremap <S-h> gT
-nnoremap <S-l> gt
+nnoremap <S-h> gT  " tab left
+nnoremap <S-l> gt  " tab right
+
+nnoremap <S-Left> gT " tab left
+nnoremap <S-Right> gt " tab right
+
+nnoremap <S-t>  :tabnew<CR>
+
