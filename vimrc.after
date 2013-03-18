@@ -22,6 +22,8 @@ set ruler " Show current position
 
 " bells are annoying
 set noerrorbells visualbell t_vb=
+" Allow mouse mode
+set mouse=a
 
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
