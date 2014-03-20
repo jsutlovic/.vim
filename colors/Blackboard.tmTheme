@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>name</key>
+	<key>name</key>
 	<string>Blackboard</string>
 	<key>author</key>
 	<string>Domenico Carbotta</string>
@@ -376,10 +376,8 @@
 			<string>markup.deleted</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#420E09</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#C80000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -389,10 +387,8 @@
 			<string>markup.changed</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#4A410D</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#FFFF00</string>
 			</dict>
 		</dict>
 		<dict>
@@ -402,10 +398,8 @@
 			<string>markup.inserted</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#253B22</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#00AE00</string>
 			</dict>
 		</dict>
 	</array>

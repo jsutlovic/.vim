@@ -3,6 +3,13 @@ set t_Co=256
 colorscheme blackboardish
 let g:NERDTreeWinPos = "right"
 
+syntax on
+
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 set title
 set showmode
 set colorcolumn=80
@@ -14,6 +21,8 @@ set ruler " Show current position
 
 " bells are annoying
 set noerrorbells visualbell t_vb=
+" Allow mouse mode
+set mouse=a
 
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
