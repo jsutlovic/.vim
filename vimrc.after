@@ -9,7 +9,6 @@ set colorcolumn=80
 set scrolloff=5 " Start scrolling the buffer 3 lines before cursor hits bottom
 
 set laststatus=2
-set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ column=%c%V\ \ total=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 set bs=eol,start,indent " Backspace config
 set ruler " Show current position
 
