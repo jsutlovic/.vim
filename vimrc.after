@@ -6,6 +6,7 @@ let g:NERDTreeWinPos = "right"
 syntax on
 
 set smartindent
+set modeline
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -36,4 +37,12 @@ let g:gist_detect_filetype = 1
 
 " Custom mapping for tabedit -> Te
 command! -complete=file -nargs=1 Te tabedit <args>
+
+" Disable syntax checking for arduino
+" let g:syntastic_arduino_checkers = []
+let g:syntastic_arduino_checkers = ['avrgcc']
+let g:syntastic_arduino_avrgcc_quiet_messages = { "level": "errors",
+                                                \ "type": "style",
+                                                \ "regex": "",
+                                                \ "file": "\m\c\.ino$" }
 
