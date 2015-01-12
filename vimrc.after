@@ -34,3 +34,6 @@ autocmd BufWritePost .vimrc source %
 " vim Gist stuff
 let g:gist_detect_filetype = 1
 
+" Custom mapping for tabedit -> Te
+command! -complete=file -nargs=1 Te tabedit <args>
+
