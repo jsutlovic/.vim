@@ -37,6 +37,8 @@ set mouse=a
 set number
 set relativenumber
 
+set nohlsearch
+
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
 
