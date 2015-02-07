@@ -30,3 +30,6 @@ autocmd BufWritePost .vimrc source %
 " vim Gist stuff
 let g:gist_detect_filetype = 1
 
+" GUI font
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
+
