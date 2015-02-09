@@ -1,0 +1,5 @@
+vim-airline
+vim-fugitive
+vim-gitgutter
+vim-slime
+vim-surround
