@@ -59,3 +59,15 @@ let g:syntastic_arduino_avrgcc_quiet_messages = { "level": "errors",
                                                 \ "regex": "",
                                                 \ "file": "\m\c\.ino$" }
 
+let g:ctrlp_regexp = 1
+let g:ctrlp_abbrev = {
+\ 'gmode': 'i',
+\ 'abbrevs': [
+  \ {
+    \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
+    \ 'expanded': '.\{-}',
+    \ 'mode': 'pfr',
+  \ },
+  \ ]
+\ }
+
