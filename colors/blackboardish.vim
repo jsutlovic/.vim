@@ -10,7 +10,7 @@
 set background=dark
 
 if version > 580
-    hi clear
+	hi clear
 	if exists("syntax_on")
 		syntax reset
 	endif
@@ -20,7 +20,7 @@ let colors_name = "blackboardish"
 
 
 " General colors
-hi Normal		ctermfg=252		ctermbg=16		cterm=none		guifg=#e3e0d7	guibg=#242424	gui=none
+hi Normal		ctermfg=252		ctermbg=none	cterm=none		guifg=#e3e0d7	guibg=#242424	gui=none
 hi Cursor		ctermfg=234		ctermbg=228		cterm=none		guifg=#242424	guibg=#eae788	gui=none
 hi Visual		ctermfg=251		ctermbg=239		cterm=none		guifg=#c3c6ca	guibg=#554d4b	gui=none
 hi VisualNOS	ctermfg=251		ctermbg=236		cterm=none		guifg=#c3c6ca	guibg=#303030	gui=none
@@ -34,6 +34,7 @@ hi LineNr		ctermfg=241		ctermbg=232		cterm=none		guifg=#857b6f	guibg=#080808	gui
 hi SpecialKey	ctermfg=241		ctermbg=235		cterm=none		guifg=#626262	guibg=#2b2b2b	gui=none
 hi WarningMsg	ctermfg=203										guifg=#ff5f55
 hi ErrorMsg		ctermfg=196		ctermbg=236		cterm=bold		guifg=#ff2026	guibg=#3a3a3a	gui=bold
+hi NonText						ctermbg=none	cterm=none						guibg=none
 
 " Vim >= 7.0 specific colors
 if version >= 700
@@ -49,29 +50,6 @@ hi DiffAdd						ctermbg=17										guibg=#2a0d6a
 hi DiffDelete	ctermfg=234		ctermbg=60		cterm=none		guifg=#242424	guibg=#3e3969	gui=none
 hi DiffText						ctermbg=53		cterm=none						guibg=#73186e	gui=none
 hi DiffChange					ctermbg=237										guibg=#382a37
-
-"hi CursorIM
-"hi Directory
-"hi IncSearch
-"hi Menu
-"hi ModeMsg
-"hi MoreMsg
-"hi PmenuSbar
-"hi PmenuThumb
-"hi Question
-"hi Scrollbar
-"hi SignColumn
-"hi SpellBad
-"hi SpellCap
-"hi SpellLocal
-"hi SpellRare
-"hi TabLine
-"hi TabLineFill
-"hi TabLineSel
-"hi Tooltip
-"hi User1
-"hi User9
-"hi WildMenu
 
 
 " Syntax highlighting
@@ -95,6 +73,28 @@ hi Operator		ctermfg=173		cterm=none		guifg=#e5786d	gui=none
 " Links
 hi! link FoldColumn		Folded
 hi! link CursorColumn	CursorLine
-hi! link NonText		LineNr
+
+"hi CursorIM
+"hi Directory
+"hi IncSearch
+"hi Menu
+"hi ModeMsg
+"hi MoreMsg
+"hi PmenuSbar
+"hi PmenuThumb
+"hi Question
+"hi Scrollbar
+"hi SignColumn
+"hi SpellBad
+"hi SpellCap
+"hi SpellLocal
+"hi SpellRare
+"hi TabLine
+"hi TabLineFill
+"hi TabLineSel
+"hi Tooltip
+"hi User1
+"hi User9
+"hi WildMenu
 
 " vim:set ts=4 sw=4 noet:
