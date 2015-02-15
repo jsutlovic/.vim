@@ -51,6 +51,9 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
 " Custom mapping for tabedit -> Te
 command! -complete=file -nargs=1 Te tabedit <args>
 
+" Disable go build for syntastic
+let g:syntastic_go_checkers = ['gofmt']
+
 " Disable syntax checking for arduino
 " let g:syntastic_arduino_checkers = []
 let g:syntastic_arduino_checkers = ['avrgcc']
