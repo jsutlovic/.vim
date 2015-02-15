@@ -20,21 +20,21 @@ let colors_name = "blackboardish"
 
 
 " General colors
-hi Normal		ctermfg=252		ctermbg=none	cterm=none		guifg=#e3e0d7	guibg=#242424	gui=none
-hi Cursor		ctermfg=234		ctermbg=228		cterm=none		guifg=#242424	guibg=#eae788	gui=none
-hi Visual		ctermfg=251		ctermbg=239		cterm=none		guifg=#c3c6ca	guibg=#554d4b	gui=none
-hi VisualNOS	ctermfg=251		ctermbg=236		cterm=none		guifg=#c3c6ca	guibg=#303030	gui=none
-hi Search		ctermfg=177		ctermbg=241		cterm=none		guifg=#d787ff	guibg=#636066	gui=none
-hi Folded		ctermfg=103		ctermbg=237		cterm=none		guifg=#a0a8b0	guibg=#3a4046	gui=none
+hi Normal		ctermfg=252		ctermbg=NONE	cterm=NONE		guifg=#e3e0d7	guibg=#242424	gui=NONE
+hi Cursor		ctermfg=234		ctermbg=228		cterm=NONE		guifg=#242424	guibg=#eae788	gui=NONE
+hi Visual		ctermfg=251		ctermbg=239		cterm=NONE		guifg=#c3c6ca	guibg=#554d4b	gui=NONE
+hi VisualNOS	ctermfg=251		ctermbg=236		cterm=NONE		guifg=#c3c6ca	guibg=#303030	gui=NONE
+hi Search		ctermfg=177		ctermbg=241		cterm=NONE		guifg=#d787ff	guibg=#636066	gui=NONE
+hi Folded		ctermfg=103		ctermbg=237		cterm=NONE		guifg=#a0a8b0	guibg=#3a4046	gui=NONE
 hi Title		ctermfg=230						cterm=bold		guifg=#ffffd7					gui=bold
-hi StatusLine	ctermfg=230		ctermbg=238		cterm=none		guifg=#ffffd7	guibg=#444444	gui=italic
-hi VertSplit	ctermfg=238		ctermbg=238		cterm=none		guifg=#444444	guibg=#444444	gui=none
-hi StatusLineNC	ctermfg=241		ctermbg=238		cterm=none		guifg=#857b6f	guibg=#444444	gui=none
-hi LineNr		ctermfg=241		ctermbg=232		cterm=none		guifg=#857b6f	guibg=#080808	gui=none
-hi SpecialKey	ctermfg=241		ctermbg=235		cterm=none		guifg=#626262	guibg=#2b2b2b	gui=none
+hi StatusLine	ctermfg=230		ctermbg=238		cterm=NONE		guifg=#ffffd7	guibg=#444444	gui=italic
+hi VertSplit	ctermfg=238		ctermbg=238		cterm=NONE		guifg=#444444	guibg=#444444	gui=NONE
+hi StatusLineNC	ctermfg=241		ctermbg=238		cterm=NONE		guifg=#857b6f	guibg=#444444	gui=NONE
+hi LineNr		ctermfg=241		ctermbg=232		cterm=NONE		guifg=#857b6f	guibg=#080808	gui=NONE
+hi SpecialKey	ctermfg=241		ctermbg=235		cterm=NONE		guifg=#626262	guibg=#2b2b2b	gui=NONE
 hi WarningMsg	ctermfg=203										guifg=#ff5f55
 hi ErrorMsg		ctermfg=196		ctermbg=236		cterm=bold		guifg=#ff2026	guibg=#3a3a3a	gui=bold
-hi NonText						ctermbg=none	cterm=none						guibg=none
+hi NonText						ctermbg=NONE	cterm=NONE						guibg=NONE
 
 " Vim >= 7.0 specific colors
 if version >= 700
