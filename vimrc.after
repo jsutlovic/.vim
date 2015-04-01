@@ -37,7 +37,12 @@ set mouse=a
 set number
 set relativenumber
 
+" Don't highlight keywords on search
 set nohlsearch
+
+" Splits open to the right and below
+set splitright
+set splitbelow
 
 " autoreload .vimrc
 autocmd BufWritePost .vimrc source %
