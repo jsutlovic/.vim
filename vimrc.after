@@ -18,7 +18,7 @@ set scrolloff=15
 " Color column
 set colorcolumn=80
 "let &colorcolumn="80,".join(range(120,999),",")
-highlight ColorColumn  ctermbg=235
+highlight ColorColumn ctermbg=234
 
 " Hilight current line
 set cursorline
@@ -74,8 +74,12 @@ let g:ctrlp_abbrev = {
   \ {
     \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
     \ 'expanded': '.\{-}',
-    \ 'mode': 'pfr',
+    \ 'mode': 'pfrz',
   \ },
   \ ]
 \ }
 
+" Use the_silver_searcher if available
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
