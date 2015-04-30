@@ -10,6 +10,7 @@ set modeline
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set foldlevelstart=20
 
 set title
 set showmode
