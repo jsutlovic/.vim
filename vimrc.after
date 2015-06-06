@@ -59,6 +59,17 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
 " Custom mapping for tabedit -> Te
 command! -complete=file -nargs=1 Te tabedit <args>
 
+
+" --- Syntastic Things ---
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Disable go build for syntastic
 let g:syntastic_go_checkers = ['gofmt']
 
@@ -69,6 +80,12 @@ let g:syntastic_arduino_avrgcc_quiet_messages = { "level": "errors",
                                                 \ "type": "style",
                                                 \ "regex": "",
                                                 \ "file": "\m\c\.ino$" }
+
+" Enable rubocop for Ruby checkers
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+
+
+" --- CtrlP Things ---
 
 let g:ctrlp_regexp = 1
 let g:ctrlp_abbrev = {
