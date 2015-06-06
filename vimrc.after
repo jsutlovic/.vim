@@ -21,7 +21,7 @@ set colorcolumn=80
 "let &colorcolumn="80,".join(range(120,999),",")
 highlight ColorColumn ctermbg=234
 
-let &winwidth = 80
+let &winwidth = 81
 
 " Hilight current line
 set cursorline
