@@ -84,6 +84,11 @@ let g:syntastic_arduino_avrgcc_quiet_messages = { "level": "errors",
 " Enable rubocop for Ruby checkers
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
+let g:syntastic_ignore_files = [
+\ 'schema.rb$',
+\ 'Gemfile$',
+\ ]
+
 
 " --- CtrlP Things ---
 
