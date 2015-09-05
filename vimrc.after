@@ -108,6 +108,9 @@ let g:ctrlp_custom_ignore = {
 \ 'file': ''
 \ }
 
+
+" --- Misc Things ---
+
 " Use the_silver_searcher if available
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -117,6 +120,11 @@ let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_target = "tmux"
 
 let g:airline_extensions = []
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+" hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=233
 
 "Disable arrow keys
 inoremap  <Up>     <NOP>
