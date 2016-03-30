@@ -24,6 +24,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+let g:html_indent_inctags = "html,body,head,main,header"
+
 call janus#disable_plugin('command-t')
 call janus#disable_plugin('nerdcommenter')
 call janus#disable_plugin('snipmate')
