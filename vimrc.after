@@ -92,6 +92,7 @@ let g:syntastic_ignore_files = [
 
 " --- CtrlP Things ---
 
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_regexp = 1
 let g:ctrlp_abbrev = {
 \ 'gmode': 'i',
@@ -104,8 +105,8 @@ let g:ctrlp_abbrev = {
   \ ]
 \ }
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(node_modules|\.git|tmp|log|bin)$',
-\ 'file': ''
+\ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv)$',
+\ 'file': '\v(\.pyc|\.min\.(css|js)|\.(css|js)\.map)$'
 \ }
 
 
