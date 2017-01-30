@@ -1,4 +1,4 @@
-"let mapleader="\\"
+let mapleader="\\"
 
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
