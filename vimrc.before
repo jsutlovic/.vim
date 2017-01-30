@@ -35,4 +35,4 @@ let g:NERDCustomDelimiters = {
 \ }
 
 " Run rustfmt on Rust files on save
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
