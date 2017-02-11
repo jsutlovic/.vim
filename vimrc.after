@@ -65,6 +65,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_reuse_loc_lists = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
@@ -84,6 +85,14 @@ let g:syntastic_arduino_avrgcc_quiet_messages = { "level": "errors",
 " Enable rubocop for Ruby checkers
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
+" Only jshint for JavaScript
+let g:syntastic_javascript_checkers = ['jshint']
+
+" C checkers: GCC and oclint
+let g:syntastic_c_checkers = ['gcc', 'oclint']
+" C++ checkers: GCC and oclint
+let g:syntastic_cpp_checkers = ['gcc', 'oclint']
+
 let g:syntastic_ignore_files = [
 \ 'schema.rb$',
 \ 'Gemfile$',
@@ -92,6 +101,7 @@ let g:syntastic_ignore_files = [
 
 " --- CtrlP Things ---
 
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_regexp = 1
 let g:ctrlp_abbrev = {
 \ 'gmode': 'i',
@@ -104,8 +114,8 @@ let g:ctrlp_abbrev = {
   \ ]
 \ }
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(node_modules|\.git|tmp|log|bin)$',
-\ 'file': ''
+\ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv)$',
+\ 'file': '\v(\.pyc|\.min\.(css|js)|\.(css|js)\.map)$'
 \ }
 
 
