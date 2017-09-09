@@ -34,7 +34,7 @@ set ruler " Show current position
 " bells are annoying
 set noerrorbells visualbell t_vb=
 " Allow mouse mode
-set mouse=a
+set mouse=nv
 
 " Hybrid number/relative mode in Vim 7.4
 set number
@@ -113,11 +113,21 @@ let g:ctrlp_abbrev = {
   \ },
   \ ]
 \ }
-let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv|elm-stuff|.build)$',
-\ 'file': '\v(\.pyc|\.min\.(css|js)|\.(css|js)\.map)$'
-\ }
+" let g:ctrlp_custom_ignore = {
+" \ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv|elm-stuff|.build)$',
+" \ 'file': '\v(\.pyc|\.min\.(css|js)|\.(css|js)\.map)$'
+" \ }
 
+if executable('ag')
+  " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast, respects .gitignore
+  " and .agignore. Ignores hidden files by default.
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -f -g ""'
+else
+  "ctrl+p ignore files in .gitignore
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+endif
 
 " --- Misc Things ---
 
