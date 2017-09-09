@@ -114,7 +114,7 @@ let g:ctrlp_abbrev = {
   \ ]
 \ }
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv)$',
+\ 'dir':  '\v(node_modules|\.git|tmp|log|bin|venv|elm-stuff|.build)$',
 \ 'file': '\v(\.pyc|\.min\.(css|js)|\.(css|js)\.map)$'
 \ }
 
