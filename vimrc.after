@@ -59,6 +59,11 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
 " Custom mapping for tabedit -> Te
 command! -complete=file -nargs=1 Te tabedit <args>
 
+" Load .vimrc in the base directory of a git repo, if it exists
+let $git_vimrc= expand(system("echo -n $(git rev-parse --show-toplevel)/.vimrc"))
+if filereadable($git_vimrc) && $git_vimrc != expand("$HOME/.vimrc")
+    source $git_vimrc
+endif
 
 " --- Syntastic Things ---
 set statusline+=%#warningmsg#
@@ -69,7 +74,12 @@ let g:syntastic_reuse_loc_lists = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+
+let g:syntastic_mode_map = {
+       \'mode': 'passive',
+       \ 'active_filetypes': ['ruby', 'python', 'go'],
+       \ 'passive_filetypes': [] }
+
 
 " Disable go build for syntastic
 let g:syntastic_go_checkers = ['gofmt']
