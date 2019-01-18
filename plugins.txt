@@ -1,30 +1,7 @@
-vim-airline
-vim-fugitive
-vim-gitgutter
-vim-slime
-vim-surround
---
-ack -- Find in files
-ctrlp -- Fuzzy filename match
-matchit -- Match do/end for Ruby
-multiple-cursors -- Ctrl+N for multi-cursor
-supertab -- vim tab quick overview
-vim-surround -- Surround text objects with text - strings
-syntastic -- Syntax checking and linting
-vim-trailing-whitespace -- Hilight trailing whitespace in red
---
-Dockerfile.vim -- Dockerfile syntax support
-editorconfig-vim -- EditorConfig support
-html5.vim -- HTLM5 syntax support
-nim.vim -- Nim syntax
-rust.vim -- Rust syntax
-tabular -- Text alinging
-vim-airline -- Pretty status line
-vim-arduino-ino -- Arduino syntax
-vim-dispatch -- CLI and build utils
-vim-fugitive -- Git in vim
-vim-gitgutter -- Git diff in gutter
-vim-indent-guides -- Indent guides
-vim-slime -- Send text to tmux
-vim-textobj-rubyblock -- Text objects for ruby blocks
-vim-textobj-user -- Custom text objects
+custom git@github.com:jsutlovic/.vim.git
+omnisharp-vim https://github.com/OmniSharp/omnisharp-vim
+vim-airline https://github.com/vim-airline/vim-airline.git
+vim-commentary git@github.com:tpope/vim-commentary.git
+vim-csharp https://github.com/OrangeT/vim-csharp.git
+vim-glsl https://github.com/tikhomirov/vim-glsl.git
+vim-indent-guides git@github.com:nathanaelkane/vim-indent-guides.git
