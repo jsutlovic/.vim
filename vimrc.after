@@ -156,6 +156,16 @@ let g:indent_guides_guide_size = 1
 " hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=233
 
+" https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+
 "Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
