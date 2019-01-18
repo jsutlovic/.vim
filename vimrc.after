@@ -77,7 +77,7 @@ let g:syntastic_check_on_open = 0
 
 let g:syntastic_mode_map = {
        \'mode': 'passive',
-       \ 'active_filetypes': ['ruby', 'python', 'go', 'javascript'],
+       \ 'active_filetypes': ['ruby', 'python', 'go', 'javascript', 'cs'],
        \ 'passive_filetypes': ['ruby', 'python', 'go', 'javascript'], }
 
 
@@ -102,6 +102,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_c_checkers = ['gcc', 'oclint']
 " C++ checkers: GCC and oclint
 let g:syntastic_cpp_checkers = ['gcc', 'oclint']
+
+let g:syntastic_cs_checkers = ['code_checker']
 
 let g:syntastic_ignore_files = [
 \ 'schema.rb$',
@@ -138,6 +140,71 @@ else
   "ctrl+p ignore files in .gitignore
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
+
+" --- SuperTab config ---
+
+set completeopt=longest,menuone
+autocmd FileType *
+			\ if &omnifunc != '' |
+			\   call SuperTabChain(&omnifunc, "<c-p>") |
+			\ endif
+
+" let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+" let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+" let g:SuperTabContextDiscoverDiscovery =
+" 			\ ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+
+
+" --- OmniSharp config ---
+
+let g:OmniSharp_highlight_types = 1
+augroup omnisharp_commands
+	autocmd!
+
+	au FileType cs OmniSharpHighlightTypes
+
+    " When Syntastic is available but not ALE, automatic syntax check on events
+    " (TextChanged requires Vim 7.4)
+    " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+	autocmd BufWritePost *.cs SyntasticCheck
+
+    " Show type information automatically when the cursor stops moving
+    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
+    " Update the highlighting whenever leaving insert mode
+    autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+
+    " Alternatively, use a mapping to refresh highlighting for the current buffer
+    autocmd FileType cs nnoremap <buffer> <Leader>th :OmniSharpHighlightTypes<CR>
+
+    " The following commands are contextual, based on the cursor position.
+    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
+
+    autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
+
+	autocmd FileType cs setlocal cinoptions=j1,{0,(0,ws,Ws
+augroup end
+
+" Contextual code actions (uses fzf, CtrlP or unite.vim when available)
+nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
+" Run code actions with text selected in visual mode to extract method
+xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
+
+" Rename with dialog
+nnoremap <Leader>nm :OmniSharpRename<CR>
+" Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
+command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+
+nnoremap <Leader>ff :OmniSharpCodeFormat<CR>
+
+" Start the omnisharp server for the current solution
+nnoremap <Leader>ss :OmniSharpStartServer<CR>
+nnoremap <Leader>sp :OmniSharpStopServer<CR>
+
 
 " --- Misc Things ---
 
